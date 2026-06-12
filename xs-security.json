@@ -1,0 +1,32 @@
+{
+  "xsappname": "riskmanagement-${space}",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.RiskViewer",
+      "description": "Read access to Risks and Mitigations"
+    },
+    {
+      "name": "$XSAPPNAME.RiskManager",
+      "description": "Full access to Risks and Mitigations"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "RiskViewer",
+      "description": "generated RoleTemplate for RiskViewer",
+      "scope-references": [
+        "$XSAPPNAME.RiskViewer"
+      ]
+    },
+    {
+      "name": "RiskManager",
+      "description": "generated RoleTemplate for RiskManager",
+      "scope-references": [
+        "$XSAPPNAME.RiskManager"
+      ]
+    }
+  ],
+  "authorities-inheritance": false
+}
